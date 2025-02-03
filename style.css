@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Primary Colors */
+    --Cyan: hsl(179, 62%, 43%);
+    --Bright-Yellow: hsl(71, 73%, 54%);
+    --Skyblue: hsl(179, 83%, 86%);
+
+    /* Neutral Colors */
+    --Light-Gray: hsl(204, 43%, 93%);
+    --Grayish-Blue: hsl(210, 3%, 71%);
+    --White: hsl(0, 0%, 100%);
+}
+
+body {
+    background-color: var(--Grayish-Blue);
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* this handles all the 3 cards */
+.card {
+    width: 375px;
+    padding: 20px;
+    text-align: left;
+    border-radius: 0;
+    height: 225px;
+}
+
+/* first card and its elements inside it */
+.first-card {
+    background-color: var(--Light-Gray);
+    padding: 30px;
+    border-top-right-radius: 2px;
+    border-top-left-radius: 2px;
+}
+
+.first-card-heading {
+    color: var(--Cyan);
+    font-size: 22px;
+    font-weight: bold;
+    padding-bottom: 4px;
+}
+
+.refundable-paragraph {
+    color: var(--Bright-Yellow);
+    font-weight: bold;
+    margin-top: 10px;
+    padding-bottom: 4px;
+}
+
+.tutorials-access-paragraph {
+    color: var(--Grayish-Blue);
+    margin-top: 10px;
+}
+
+/* second card and its elements inside it */
+.second-card {
+    background-color: hsl(179, 53%, 43%);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.subscription-cover-range {
+    color: var(--Light-Gray);
+    font-size: 16px;
+    padding-bottom: 4px;
+}
+
+.price-container {
+    display: flex;
+    text-align: center;
+    gap: 10px;
+    
+}
+
+.subscription-price {
+    color: var(--Light-Gray);
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 10px;
+    
+}
+
+.per-month {
+    color: var(--Grayish-Blue);
+    padding-top: 16px;
+}
+
+.subscription-access {
+    color: var(--Light-Gray);
+    padding: 4px;
+}
+
+
+
+.sign-up-btn {
+    background-color: var(--Bright-Yellow);
+    color: var(--Light-Gray);
+    border: none;
+    padding: 10px;
+    width: 100%;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+    border-radius: 5px;
+}
+
+/* third card and its elements inside it */
+.third-card {
+    background-color: var(--Cyan);
+    padding: 30px;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+.why-us-heading {
+    color: var(--Light-Gray);
+    font-size: 18px;
+    font-weight: bold;
+    padding-bottom: 4px;
+}
+
+.feature-list {
+    color: var(--Light-Gray);
+    margin-top: 10px;
+    font-size: 15px;
+    padding-top: 4px;
+}
+
+/* desktop version */
+@media only screen and (min-width: 900px) {
+    .container {
+        max-width: 700px;
+    }
+
+    .cards-wrapper {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .first-card {
+        width: 100%;
+        padding: 40px;
+    }
+
+    .second-card {
+        flex: 1;
+        min-width: 50%;
+        order: 1; 
+        border-bottom-left-radius: 2px; 
+    }
+
+    .third-card {
+        flex: 1;
+        min-width: 50%;
+        order: 2; 
+        border-bottom-left-radius: 0; 
+        border-bottom-right-radius: 2px; 
+    }
+}
